@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.User.DetailWaitForCookingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#FF7A21"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="40,40,80,20,45,*" VerticalOptions="FillAndExpand">
+            <StackLayout
+                Grid.Row="1"
+                Margin="10,0"
+                Orientation="Horizontal">
+                <!--  Back Button  -->
+                <Frame
+                    Margin="0,0,5,0"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    HasShadow="False"
+                    HeightRequest="40"
+                    HorizontalOptions="Start"
+                    VerticalOptions="StartAndExpand">
+                    <ImageButton
+                        Padding="10"
+                        BackgroundColor="White"
+                        Clicked="BackButton"
+                        HorizontalOptions="End"
+                        Source="backbutton.png" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="2"
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Vertical"
+                Spacing="10">
+                <Label
+                    FontFamily="SarabunReg"
+                    FontSize="Title"
+                    HorizontalTextAlignment="Center"
+                    Text="ออเดอร์หมายเลข"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    FontFamily="SarabunReg"
+                    FontSize="Medium"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Order_Id}"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+            </StackLayout>
+
+            <Label
+                Grid.Row="4"
+                FontFamily="SarabunReg"
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                Text="เหลืออีก"
+                TextColor="White"
+                VerticalTextAlignment="Center" />
+
+            <Label
+                Grid.Row="5"
+                Margin="10,0,10,200"
+                FontAttributes="Bold"
+                FontFamily="SarabunReg"
+                FontSize="200"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Wait}"
+                TextColor="White"
+                VerticalOptions="FillAndExpand"
+                VerticalTextAlignment="Center" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

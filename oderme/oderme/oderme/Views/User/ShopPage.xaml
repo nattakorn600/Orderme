@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.User.ShopPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:oderme.Services"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="40,40,90,10,30,45,auto" VerticalOptions="Start">
+            <Image
+                Grid.RowSpan="6"
+                Aspect="AspectFill"
+                Source="{Binding Background}" />
+
+            <BoxView
+                Grid.Row="5"
+                BackgroundColor="#EFEFEF"
+                CornerRadius="50,50,0,0"
+                HeightRequest="40"
+                VerticalOptions="EndAndExpand" />
+            <StackLayout
+                Grid.Row="1"
+                Margin="10,0"
+                Orientation="Horizontal">
+                <!--  Back Button  -->
+
+                <Frame
+                    Margin="0,0,5,0"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    HasShadow="False"
+                    HeightRequest="40"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="StartAndExpand">
+                    <ImageButton
+                        Padding="10"
+                        BackgroundColor="White"
+                        Clicked="BackButton"
+                        HorizontalOptions="End"
+                        Source="backbutton.png" />
+                </Frame>
+
+                <!--  cart  -->
+                <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
+                    <Frame
+                        Margin="0,0,5,0"
+                        Padding="0"
+                        BackgroundColor="White"
+                        CornerRadius="50"
+                        HasShadow="False"
+                        HeightRequest="40"
+                        VerticalOptions="StartAndExpand">
+                        <ImageButton
+                            Padding="10"
+                            BackgroundColor="White"
+                            Clicked="GoToCart"
+                            HorizontalOptions="End"
+                            Source="shoppingcart.png" />
+                    </Frame>
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="Red"
+                        CornerRadius="50"
+                        HeightRequest="15"
+                        HorizontalOptions="EndAndExpand"
+                        IsVisible="false"
+                        VerticalOptions="StartAndExpand"
+                        WidthRequest="15">
+                        <Label
+                            x:Name="NumberMenu"
+                            FontFamily="Sarabun"
+                            FontSize="8"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="1"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+                    </Frame>
+                </Grid>
+
+
+                <!--  more  -->
+                <Frame
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    HasShadow="False"
+                    HeightRequest="40"
+                    VerticalOptions="StartAndExpand">
+                    <ImageButton
+                        Padding="10"
+                        BackgroundColor="White"
+                        Clicked="GoToInfoAndReview"
+                        HorizontalOptions="End"
+                        Source="more.png" />
+                </Frame>
+            </StackLayout>
+
+            <!--  banner shop  -->
+            <Frame
+                Grid.Row="2"
+                Padding="0"
+                BackgroundColor="Transparent"
+                CornerRadius="15"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Grid>
+                    <BoxView BackgroundColor="Black" Opacity="0.5" />
+                    <StackLayout Padding="20,10" Spacing="-5">
+                        <!--  Shop name  -->
+                        <Label
+                            FontFamily="Sarabun"
+                            FontSize="20"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{Binding Name}"
+                            TextColor="#FF7A21" />
+
+                        <!--  rate  -->
+                        <StackLayout
+                            HorizontalOptions="CenterAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="0.5">
+                            <Image HeightRequest="15" Source="Stared.png" />
+                            <Label
+                                FontFamily="Sarabun"
+                                FontSize="12"
+                                Text="{Binding Point}"
+                                TextColor="White" />
+                            <Label
+                                FontFamily="Sarabun"
+                                FontSize="12"
+                                Text="("
+                                TextColor="White" />
+                            <Label
+                                FontFamily="Sarabun"
+                                FontSize="12"
+                                Text="{Binding PointCount}"
+                                TextColor="White" />
+                            <Label
+                                FontFamily="Sarabun"
+                                FontSize="12"
+                                Text=")"
+                                TextColor="White" />
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <!--  Menu  -->
+            <StackLayout
+                Grid.Row="4"
+                Margin="10,0"
+                Padding="0"
+                VerticalOptions="End">
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout
+                        x:Name="StackMenu"
+                        Margin="3"
+                        BindableLayout.ItemsSource="{Binding MenuGroup}"
+                        HorizontalOptions="Start"
+                        Orientation="Horizontal"
+                        VerticalOptions="Fill">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame
+                                    Padding="10,5"
+                                    BackgroundColor="#FF7A21"
+                                    CornerRadius="20">
+                                    <Label
+                                        FontSize="12"
+                                        Text="{Binding Type}"
+                                        TextColor="White" />
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="RecommendMenu" />
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+
+            <CollectionView
+                x:Name="collectionViews"
+                Grid.Row="5"
+                Grid.RowSpan="2"
+                Margin="0,30,0,0"
+                ItemsSource="{Binding MenuGroup}"
+                Scrolled="OnCollectionViewScrolled">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
+                                <Frame
+                                    Margin="10,10,10,0"
+                                    Padding="0"
+                                    BackgroundColor="#FF7A21"
+                                    CornerRadius="20"
+                                    HasShadow="False"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="StartAndExpand">
+
+                                    <Label
+                                        Padding="20,0"
+                                        FontAttributes="Bold"
+                                        FontFamily="Sarabun"
+                                        FontSize="Large"
+                                        HorizontalTextAlignment="Start"
+                                        Text="{Binding Type}"
+                                        TextColor="White"
+                                        VerticalTextAlignment="Center" />
+                                </Frame>
+                            </StackLayout>
+
+                            <StackLayout
+                                Margin="10,0"
+                                BindableLayout.ItemsSource="{Binding MenuList}"
+                                HorizontalOptions="FillAndExpand"
+                                Spacing="0">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Frame
+                                                Margin="10,5,10,0"
+                                                Padding="0,10"
+                                                BackgroundColor="White"
+                                                CornerRadius="20"
+                                                HasShadow="False">
+                                                <StackLayout
+                                                    HorizontalOptions="FillAndExpand"
+                                                    Orientation="Horizontal"
+                                                    VerticalOptions="FillAndExpand">
+
+                                                    <Frame
+                                                        Margin="10,0"
+                                                        Padding="0"
+                                                        BackgroundColor="Black"
+                                                        CornerRadius="100"
+                                                        HeightRequest="80"
+                                                        HorizontalOptions="Start"
+                                                        MinimumWidthRequest="100"
+                                                        VerticalOptions="StartAndExpand"
+                                                        WidthRequest="80">
+                                                        <Image
+                                                            Aspect="AspectFill"
+                                                            HorizontalOptions="FillAndExpand"
+                                                            Source="{Binding Image}"
+                                                            VerticalOptions="FillAndExpand" />
+                                                    </Frame>
+
+                                                    <StackLayout
+                                                        HorizontalOptions="StartAndExpand"
+                                                        Spacing="-7"
+                                                        VerticalOptions="CenterAndExpand">
+                                                        <Label
+                                                            FontAttributes="Bold"
+                                                            FontFamily="Sarabun"
+                                                            FontSize="20"
+                                                            Text="{Binding Name}"
+                                                            TextColor="Black" />
+                                                        <Label
+                                                            FontFamily="Sarabun"
+                                                            FontSize="9"
+                                                            MaxLines="1"
+                                                            Text="{Binding Type}"
+                                                            TextColor="#939393" />
+                                                    </StackLayout>
+
+                                                    <StackLayout
+                                                        HorizontalOptions="EndAndExpand"
+                                                        MinimumWidthRequest="100"
+                                                        VerticalOptions="StartAndExpand">
+                                                        <Frame
+                                                            Margin="10,0"
+                                                            Padding="10,5,10,5"
+                                                            BackgroundColor="#FF7A21"
+                                                            CornerRadius="20"
+                                                            HasShadow="False"
+                                                            HorizontalOptions="EndAndExpand"
+                                                            VerticalOptions="StartAndExpand">
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Label
+                                                                    FontAttributes="Bold"
+                                                                    FontFamily="Sarabun"
+                                                                    FontSize="12"
+                                                                    HorizontalTextAlignment="Center"
+                                                                    Text="{Binding Price}"
+                                                                    TextColor="White"
+                                                                    VerticalTextAlignment="Center" />
+                                                                <Label
+                                                                    FontAttributes="Bold"
+                                                                    FontFamily="Sarabun"
+                                                                    FontSize="12"
+                                                                    HorizontalTextAlignment="Center"
+                                                                    Text="บาท"
+                                                                    TextColor="White"
+                                                                    VerticalTextAlignment="Center" />
+                                                            </StackLayout>
+                                                        </Frame>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Frame>
+                                            <Button
+                                                Margin="10,5,10,0"
+                                                BackgroundColor="Black"
+                                                Clicked="SelectMenu"
+                                                CommandParameter="{Binding Id}"
+                                                CornerRadius="20"
+                                                Opacity="0"
+                                                Text="{Binding MainType}"
+                                                TextColor="Transparent" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <ActivityIndicator
+                x:Name="LoadShow"
+                Grid.RowSpan="7"
+                HorizontalOptions="CenterAndExpand"
+                IsRunning="True"
+                VerticalOptions="Center"
+                WidthRequest="50"
+                Color="Orange" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

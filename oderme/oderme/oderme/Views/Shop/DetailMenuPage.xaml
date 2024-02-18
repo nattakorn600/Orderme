@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.Shop.DetailMenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:oderme.Controls"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView>
+                <Grid RowDefinitions="*,60,80">
+                    <Grid
+                        RowDefinitions="40,40,85,75,40,35,auto"
+                        RowSpacing="1.5"
+                        VerticalOptions="Start">
+                        <Image
+                            x:Name="Bg"
+                            Grid.RowSpan="5"
+                            Aspect="AspectFill"
+                            Source="bgtest.png" />
+
+                        <BoxView
+                            Grid.Row="4"
+                            BackgroundColor="#EFEFEF"
+                            CornerRadius="50,50,0,0"
+                            HeightRequest="40"
+                            VerticalOptions="EndAndExpand" />
+                        <StackLayout
+                            Grid.Row="1"
+                            Margin="10,0"
+                            Orientation="Horizontal">
+                            <!--  Back Button  -->
+
+                            <Frame
+                                Margin="0,0,5,0"
+                                Padding="0"
+                                BackgroundColor="White"
+                                CornerRadius="50"
+                                HasShadow="False"
+                                HeightRequest="40"
+                                HorizontalOptions="StartAndExpand"
+                                VerticalOptions="StartAndExpand">
+                                <ImageButton
+                                    Padding="10"
+                                    BackgroundColor="White"
+                                    Clicked="BackButton"
+                                    HorizontalOptions="End"
+                                    Source="backbutton.png" />
+                            </Frame>
+                            <Frame
+                                Margin="0,0,5,0"
+                                Padding="0"
+                                BackgroundColor="White"
+                                CornerRadius="50"
+                                HasShadow="False"
+                                HeightRequest="40"
+                                HorizontalOptions="End"
+                                VerticalOptions="StartAndExpand">
+                                <ImageButton
+                                    Padding="10"
+                                    BackgroundColor="White"
+                                    Clicked="DeleteBtn"
+                                    Source="delete.png" />
+                            </Frame>
+                        </StackLayout>
+
+                        <Frame
+                            Grid.Row="2"
+                            Padding="0"
+                            BackgroundColor="Transparent"
+                            CornerRadius="50"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand">
+                            <Grid>
+                                <BoxView BackgroundColor="Black" Opacity="0.5" />
+                                <StackLayout Padding="20,10" Spacing="-5">
+                                    <!--  Shop name  -->
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="20"
+                                        Text="{Binding Name}"
+                                        TextColor="#FF7A21" />
+
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+
+                        <StackLayout
+                            Grid.Row="3"
+                            Grid.RowSpan="3"
+                            VerticalOptions="FillAndExpand">
+                            <Frame
+                                Padding="0"
+                                BackgroundColor="Black"
+                                CornerRadius="500"
+                                HasShadow="True"
+                                HeightRequest="150"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="150">
+                                <Image
+                                    Aspect="AspectFill"
+                                    HorizontalOptions="FillAndExpand"
+                                    Source="{Binding Image}"
+                                    VerticalOptions="FillAndExpand" />
+                            </Frame>
+                        </StackLayout>
+
+
+                        <StackLayout
+                            Grid.Row="6"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Frame
+                                Margin="20"
+                                Padding="2"
+                                BackgroundColor="#FF7A21"
+                                CornerRadius="50"
+                                HasShadow="False">
+                                <StackLayout Margin="20,0" Orientation="Horizontal">
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="18"
+                                        HorizontalOptions="StartAndExpand"
+                                        Text="เพิ่มเติม"
+                                        TextColor="White" />
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="18"
+                                        HorizontalOptions="End"
+                                        Text="ราคา"
+                                        TextColor="White" />
+                                </StackLayout>
+                            </Frame>
+
+                            <StackLayout Margin="40,0,50,0" BindableLayout.ItemsSource="{Binding OtherGroup}">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Orientation="Horizontal">
+                                            <ImageButton
+                                                Padding="10"
+                                                BackgroundColor="Transparent"
+                                                Clicked="CancelOther"
+                                                CommandParameter="{Binding Id}"
+                                                Source="negative"
+                                                WidthRequest="35" />
+                                            <Label
+                                                FontFamily="Sarabun"
+                                                FontSize="18"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="{Binding Name}"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand" />
+
+                                            <Label
+                                                FontFamily="Sarabun"
+                                                FontSize="18"
+                                                HorizontalOptions="End"
+                                                Text="{Binding Price}"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand" />
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                            <!--  ปุ่มเพิ่ม  -->
+                            <Button
+                                x:Name="MyChoice"
+                                Margin="20"
+                                BackgroundColor="#FF7A21"
+                                Clicked="AddChoice"
+                                CornerRadius="5"
+                                FontFamily="SarabunReg"
+                                FontSize="18"
+                                Text="+ เพิ่ม"
+                                TextColor="White" />
+
+                            <!--  เพิ่ม  -->
+                            <Frame
+                                x:Name="Addchoice"
+                                Margin="20"
+                                Padding="10,10,10,0"
+                                BackgroundColor="White"
+                                CornerRadius="5"
+                                HasShadow="True"
+                                IsVisible="false">
+                                <Grid
+                                    ColumnDefinitions="*,1,*"
+                                    RowDefinitions="*,30"
+                                    RowSpacing="10">
+                                    <Frame
+                                        Grid.Column="0"
+                                        Padding="5"
+                                        BorderColor="#A5A5A5"
+                                        CornerRadius="5"
+                                        HasShadow="False">
+                                        <controls:CustomEntry
+                                            x:Name="EntryChoice"
+                                            FontSize="15"
+                                            HorizontalTextAlignment="Center"
+                                            Placeholder="รายการ"
+                                            PlaceholderColor="#A5A5A5" />
+                                    </Frame>
+                                    <Frame
+                                        Grid.Column="2"
+                                        Padding="5"
+                                        BorderColor="#A5A5A5"
+                                        CornerRadius="5"
+                                        HasShadow="False">
+                                        <controls:CustomEntry
+                                            x:Name="EntryPrice"
+                                            FontSize="15"
+                                            HorizontalTextAlignment="Center"
+                                            Keyboard="Numeric"
+                                            Placeholder="ราคา/บาท"
+                                            PlaceholderColor="#A5A5A5" />
+                                    </Frame>
+
+                                    <ImageButton
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Padding="8"
+                                        BackgroundColor="Transparent"
+                                        Clicked="AddOther"
+                                        Source="check.png" />
+
+                                    <BoxView
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        BackgroundColor="#F0F1F3" />
+
+                                    <ImageButton
+                                        Grid.Row="1"
+                                        Grid.Column="2"
+                                        Padding="8"
+                                        BackgroundColor="Transparent"
+                                        Clicked="Close"
+                                        Source="close.png" />
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </Grid>
+                    <StackLayout
+                        Grid.Row="2"
+                        Orientation="Horizontal"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Button
+                            Margin="20,0,20,20"
+                            BackgroundColor="#FF7A21"
+                            Clicked="FinishBtn"
+                            CornerRadius="50"
+                            HorizontalOptions="FillAndExpand"
+                            Text="เสร็จสิ้น"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

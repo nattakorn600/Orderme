@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.Shop.OrderPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F7F7F7"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="40,40,80,20,45,auto">
+            <Image
+                Grid.RowSpan="5"
+                Aspect="AspectFill"
+                BackgroundColor="#FF7A21" />
+
+            <BoxView
+                Grid.Row="4"
+                BackgroundColor="#F7F7F7"
+                CornerRadius="50,50,0,0"
+                HeightRequest="40"
+                VerticalOptions="EndAndExpand" />
+
+            <StackLayout
+                Grid.Row="1"
+                Margin="10,0"
+                Orientation="Horizontal">
+                <!--  Back Button  -->
+                <Frame
+                    Margin="0,0,5,0"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    HasShadow="False"
+                    HeightRequest="40"
+                    HorizontalOptions="Start"
+                    VerticalOptions="StartAndExpand">
+                    <ImageButton
+                        Padding="10"
+                        BackgroundColor="White"
+                        Clicked="BackButton"
+                        HorizontalOptions="End"
+                        Source="backbutton.png" />
+                </Frame>
+
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="2"
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Vertical">
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Label
+                        FontSize="25"
+                        HorizontalTextAlignment="Center"
+                        Text="โต๊ะหมายเลข"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+                    <Label
+                        FontSize="25"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Table}"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Label
+                        FontSize="14"
+                        HorizontalTextAlignment="Center"
+                        Text="หมายเลขออเดอร์"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+                    <Label
+                        FontSize="14"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Order_Id}"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </StackLayout>
+
+            <!--  ออเดอร์  -->
+            <ScrollView
+                Grid.Row="4"
+                Grid.RowSpan="2"
+                Margin="0,20,0,0"
+                VerticalScrollBarVisibility="Never">
+                <StackLayout>
+                    <StackLayout
+                        Margin="10,0"
+                        Padding="5"
+                        BindableLayout.ItemsSource="{Binding Menus}"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Frame
+                                        Padding="10,10"
+                                        BackgroundColor="White"
+                                        CornerRadius="10"
+                                        HasShadow="True">
+                                        <StackLayout>
+                                            <Grid ColumnDefinitions="50,*,*,30" ColumnSpacing="10">
+                                                <Frame
+                                                    Grid.Column="0"
+                                                    Padding="0"
+                                                    BackgroundColor="White"
+                                                    CornerRadius="100"
+                                                    HasShadow="False"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    VerticalOptions="CenterAndExpand">
+                                                    <Image
+                                                        x:Name="Picture"
+                                                        Aspect="AspectFill"
+                                                        BackgroundColor="White"
+                                                        HeightRequest="50"
+                                                        HorizontalOptions="End"
+                                                        Source="{Binding Image}"
+                                                        WidthRequest="90" />
+                                                </Frame>
+
+
+                                                <!--  หมายเลขออเดอร์  -->
+                                                <Label
+                                                    Grid.Column="1"
+                                                    FontFamily="Sarabun"
+                                                    FontSize="18"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    Text="{Binding Name}"
+                                                    TextColor="Black"
+                                                    VerticalOptions="CenterAndExpand" />
+
+                                                <Label
+                                                    Grid.Column="2"
+                                                    FontFamily="Sarabun"
+                                                    FontSize="18"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    Text="{Binding Number}"
+                                                    TextColor="Black"
+                                                    VerticalOptions="CenterAndExpand" />
+
+                                                <ImageButton
+                                                    Grid.Column="3"
+                                                    BackgroundColor="Transparent"
+                                                    Clicked="ArrowClick"
+                                                    CommandParameter="{Binding Id}"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    IsVisible="{Binding VisibleArrow}"
+                                                    Rotation="{Binding Rotation}"
+                                                    Source="rightarrow.png"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    WidthRequest="20" />
+                                            </Grid>
+
+                                            <StackLayout IsVisible="{Binding VisibleOther}" Orientation="Vertical">
+                                                <Grid>
+                                                    <Label
+                                                        Grid.Column="0"
+                                                        HorizontalOptions="CenterAndExpand"
+                                                        Text="รายการเพิ่มเติม"
+                                                        TextColor="Black"
+                                                        VerticalOptions="CenterAndExpand" />
+                                                    <StackLayout Grid.Column="1" BindableLayout.ItemsSource="{Binding OtherGroup}">
+                                                        <BindableLayout.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <Label
+                                                                    HorizontalOptions="CenterAndExpand"
+                                                                    Text="{Binding Name}"
+                                                                    TextColor="Black"
+                                                                    VerticalOptions="CenterAndExpand" />
+                                                            </DataTemplate>
+                                                        </BindableLayout.ItemTemplate>
+                                                    </StackLayout>
+                                                </Grid>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+            <Button
+                Grid.Row="6"
+                Margin="20"
+                BackgroundColor="#FF7A21"
+                Clicked="NextOrder"
+                CornerRadius="45"
+                Text="ออเดอร์ถัดไป"
+                TextColor="White"
+                VerticalOptions="EndAndExpand" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

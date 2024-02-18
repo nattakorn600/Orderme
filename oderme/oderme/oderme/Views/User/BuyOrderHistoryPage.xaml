@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.User.BuyOrderHistoryPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Control="clr-namespace:oderme.Controls"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid
+            RowDefinitions="40,40,auto"
+            RowSpacing="1.5"
+            VerticalOptions="Start">
+            <Label
+                Grid.Row="1"
+                FontFamily="SarabunReg"
+                FontSize="20"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="ประวัติการสั่งซื้อ"
+                TextColor="Black"
+                VerticalTextAlignment="Center" />
+            <StackLayout
+                Grid.Row="1"
+                Margin="10,0"
+                Orientation="Horizontal">
+                <!--  Back Button  -->
+
+                <Frame
+                    Margin="0,0,5,0"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    HasShadow="False"
+                    HeightRequest="40"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="StartAndExpand">
+                    <ImageButton
+                        Padding="10"
+                        BackgroundColor="White"
+                        Clicked="BackButton"
+                        HorizontalOptions="End"
+                        Source="backbutton.png" />
+                </Frame>
+            </StackLayout>
+
+            <!--  Order  -->
+            <ScrollView
+                Grid.Row="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                VerticalScrollBarVisibility="Never">
+                <StackLayout Padding="0,20,0,20" BindableLayout.ItemsSource="{Binding OrderHis}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                Margin="10,10,10,1"
+                                Padding="15,5,15,15"
+                                BackgroundColor="White"
+                                CornerRadius="10"
+                                HasShadow="True">
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    Orientation="Vertical"
+                                    VerticalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label
+                                            FontFamily="SarabunReg"
+                                            FontSize="18"
+                                            HorizontalOptions="StartAndExpand"
+                                            Text="{Binding Shop_Name}"
+                                            TextColor="Black" />
+                                        <Label
+                                            FontFamily="SarabunReg"
+                                            FontSize="18"
+                                            HorizontalOptions="End"
+                                            Text="฿"
+                                            TextColor="Black" />
+                                        <!--  จำนวนเงิน  -->
+                                        <Label
+                                            FontFamily="SarabunReg"
+                                            FontSize="18"
+                                            HorizontalOptions="End"
+                                            Text="{Binding Price}"
+                                            TextColor="Black" />
+                                    </StackLayout>
+
+                                    <!--  รายการอาหาร  -->
+                                    <Grid Margin="0,15,0,0" ColumnDefinitions="2*,*">
+                                        <Control:CustomLabel
+                                            Grid.Row="0"
+                                            FontFamily="Sarabun"
+                                            FontSize="15"
+                                            LineBreakMode="TailTruncation"
+                                            Lines="1"
+                                            Text="{Binding MenusText}"
+                                            TextColor="#232222" />
+                                    </Grid>
+
+                                    <!--  วัน/เวลา  -->
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+                                        <Label
+                                            FontFamily="Sarabun"
+                                            FontSize="12"
+                                            Text="{Binding Date}"
+                                            TextColor="#4D4D4D" />
+                                    </StackLayout>
+
+
+                                    <!--  รายละเอียดเพิ่มเติม  -->
+                                    <Button
+                                        Margin="0,15,0,0"
+                                        BackgroundColor="#FF7A21"
+                                        Clicked="GetDetail"
+                                        CommandParameter="{Binding Id}"
+                                        CornerRadius="5"
+                                        FontFamily="Sarabun"
+                                        Text="ดูรายละเอียดเพิ่มเติม"
+                                        TextColor="White" />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

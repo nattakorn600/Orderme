@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.Shop.AddMenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:oderme.Controls"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView VerticalScrollBarVisibility="Never">
+                <Grid RowDefinitions="*,70">
+                    <Grid RowDefinitions="40,40,80,20,45,auto" VerticalOptions="Start">
+                        <Image
+                            Grid.RowSpan="5"
+                            Aspect="AspectFill"
+                            BackgroundColor="#FF7A21" />
+
+                        <BoxView
+                            Grid.Row="4"
+                            BackgroundColor="#EFEFEF"
+                            CornerRadius="50,50,0,0"
+                            HeightRequest="40"
+                            VerticalOptions="EndAndExpand" />
+
+                        <StackLayout
+                            Grid.Row="1"
+                            Margin="10,0"
+                            Orientation="Horizontal">
+                            <!--  Back Button  -->
+                            <Frame
+                                Margin="0,0,5,0"
+                                Padding="0"
+                                BackgroundColor="White"
+                                CornerRadius="50"
+                                HasShadow="False"
+                                HeightRequest="40"
+                                HorizontalOptions="Start"
+                                VerticalOptions="StartAndExpand">
+                                <ImageButton
+                                    Padding="10"
+                                    BackgroundColor="White"
+                                    Clicked="BackButton"
+                                    HorizontalOptions="End"
+                                    Source="backbutton.png" />
+                            </Frame>
+
+                        </StackLayout>
+
+                        <Label
+                            Grid.Row="2"
+                            FontSize="25"
+                            HorizontalTextAlignment="Center"
+                            Text="เพิ่มเมนูอาหาร"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+
+                        <!--  เพิ่มอาหาร  -->
+                        <StackLayout
+                            Grid.Row="4"
+                            Grid.RowSpan="2"
+                            Margin="0,20,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Frame
+                                Margin="20,0"
+                                BackgroundColor="White"
+                                CornerRadius="20"
+                                HasShadow="False">
+                                <StackLayout>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="SarabunReg"
+                                        FontSize="20"
+                                        Text="เพิ่มเมนูอาหาร"
+                                        TextColor="#FF7A21" />
+
+                                    <Grid>
+                                        <Frame
+                                            x:Name="FrameImageUp"
+                                            Margin="20"
+                                            Padding="0"
+                                            CornerRadius="20"
+                                            HasShadow="False"
+                                            HorizontalOptions="Center">
+                                            <ImageButton
+                                                x:Name="ImageUp"
+                                                BackgroundColor="Transparent"
+                                                Clicked="SelectImage" />
+                                        </Frame>
+                                        <Frame
+                                            x:Name="FrameUpImage"
+                                            Margin="20"
+                                            Padding="20,10,20,5"
+                                            CornerRadius="20"
+                                            HorizontalOptions="Center">
+                                            <ImageButton
+                                                BackgroundColor="Transparent"
+                                                Clicked="SelectImage"
+                                                HeightRequest="60"
+                                                Source="upload.png" />
+                                        </Frame>
+                                    </Grid>
+
+                                    <Grid
+                                        Margin="10,0"
+                                        ColumnDefinitions="4*,6*"
+                                        RowDefinitions="*,*,*">
+                                        <!--  ชื่อเมนูอาหาร  -->
+                                        <Label
+                                            FontSize="18"
+                                            Text="ชื่อเมนูอาหาร"
+                                            TextColor="Black"
+                                            VerticalOptions="CenterAndExpand" />
+                                        <Frame
+                                            Grid.Column="1"
+                                            Padding="5"
+                                            BorderColor="#A5A5A5"
+                                            CornerRadius="5"
+                                            HasShadow="False">
+                                            <controls:CustomEntry
+                                                x:Name="NameMenu"
+                                                FontSize="15"
+                                                HorizontalTextAlignment="Center"
+                                                Placeholder="เมนู"
+                                                PlaceholderColor="#A5A5A5" />
+                                        </Frame>
+
+                                        <!--  ประเภทอาหาร  -->
+                                        <Label
+                                            Grid.Row="1"
+                                            FontSize="18"
+                                            Text="ประเภทอาหาร"
+                                            TextColor="Black"
+                                            VerticalOptions="CenterAndExpand" />
+                                        <Frame
+                                            Grid.Row="1"
+                                            Grid.Column="1"
+                                            Padding="5"
+                                            BorderColor="#A5A5A5"
+                                            CornerRadius="5"
+                                            HasShadow="False">
+                                            <controls:CustomEntry
+                                                x:Name="TypeMenu"
+                                                FontSize="15"
+                                                HorizontalTextAlignment="Center"
+                                                Keyboard="Text"
+                                                Placeholder="คาว,หวาน"
+                                                PlaceholderColor="#A5A5A5" />
+                                        </Frame>
+
+                                        <!--  ราคา  -->
+                                        <Label
+                                            Grid.Row="2"
+                                            FontSize="18"
+                                            Text="ราคา(บาท)"
+                                            TextColor="Black"
+                                            VerticalOptions="CenterAndExpand" />
+                                        <Frame
+                                            Grid.Row="2"
+                                            Grid.Column="1"
+                                            Padding="5"
+                                            BorderColor="#A5A5A5"
+                                            CornerRadius="5"
+                                            HasShadow="False">
+                                            <controls:CustomEntry
+                                                x:Name="PriceMenu"
+                                                FontSize="15"
+                                                HorizontalTextAlignment="Center"
+                                                Keyboard="Numeric"
+                                                Placeholder="50"
+                                                PlaceholderColor="#A5A5A5" />
+                                        </Frame>
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+
+
+                            <Frame
+                                Margin="20,20,20,20"
+                                BackgroundColor="White"
+                                CornerRadius="20"
+                                HasShadow="False">
+                                <StackLayout>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="SarabunReg"
+                                        FontSize="20"
+                                        Text="เพิ่มตัวเลือก"
+                                        TextColor="#FF7A21" />
+
+                                    <StackLayout Margin="0,20,0,0" BindableLayout.ItemsSource="{Binding Choice}">
+                                        <BindableLayout.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid Margin="10,0" ColumnDefinitions="35,5*,3*,2*">
+                                                    <!--  ตัวเลือก  -->
+                                                    <ImageButton
+                                                        Padding="10"
+                                                        BackgroundColor="Transparent"
+                                                        Clicked="CancleChoice"
+                                                        CommandParameter="{Binding Id}"
+                                                        Source="negative" />
+                                                    <Label
+                                                        Grid.Column="1"
+                                                        FontSize="18"
+                                                        Text="{Binding Name}"
+                                                        TextColor="Black"
+                                                        VerticalOptions="CenterAndExpand" />
+                                                    <Label
+                                                        Grid.Column="2"
+                                                        FontSize="18"
+                                                        HorizontalOptions="EndAndExpand"
+                                                        Text="{Binding Price}"
+                                                        TextColor="Black"
+                                                        VerticalOptions="CenterAndExpand" />
+                                                    <Label
+                                                        Grid.Column="3"
+                                                        FontSize="18"
+                                                        HorizontalOptions="EndAndExpand"
+                                                        Text="บาท"
+                                                        TextColor="Black"
+                                                        VerticalOptions="CenterAndExpand" />
+                                                </Grid>
+                                            </DataTemplate>
+                                        </BindableLayout.ItemTemplate>
+                                    </StackLayout>
+
+                                    <!--  ปุ่มเพิ่ม  -->
+                                    <Button
+                                        x:Name="MyChoice"
+                                        BackgroundColor="#FF7A21"
+                                        Clicked="AddChoice"
+                                        CornerRadius="5"
+                                        FontFamily="SarabunReg"
+                                        FontSize="18"
+                                        Text="+ เพิ่ม"
+                                        TextColor="White" />
+
+                                    <!--  เพิ่ม  -->
+                                    <Frame
+                                        x:Name="Addchoice"
+                                        Padding="10,10,10,0"
+                                        BackgroundColor="White"
+                                        CornerRadius="5"
+                                        HasShadow="True"
+                                        IsVisible="false">
+                                        <Grid
+                                            ColumnDefinitions="*,1,*"
+                                            RowDefinitions="*,30"
+                                            RowSpacing="10">
+                                            <Frame
+                                                Grid.Column="0"
+                                                Padding="5"
+                                                BorderColor="#A5A5A5"
+                                                CornerRadius="5"
+                                                HasShadow="False">
+                                                <controls:CustomEntry
+                                                    x:Name="EntryChoice"
+                                                    FontSize="15"
+                                                    HorizontalTextAlignment="Center"
+                                                    Placeholder="รายการ"
+                                                    PlaceholderColor="#A5A5A5" />
+                                            </Frame>
+                                            <Frame
+                                                Grid.Column="2"
+                                                Padding="5"
+                                                BorderColor="#A5A5A5"
+                                                CornerRadius="5"
+                                                HasShadow="False">
+                                                <controls:CustomEntry
+                                                    x:Name="EntryPrice"
+                                                    FontSize="15"
+                                                    HorizontalTextAlignment="Center"
+                                                    Keyboard="Numeric"
+                                                    Placeholder="ราคา/บาท"
+                                                    PlaceholderColor="#A5A5A5" />
+                                            </Frame>
+
+                                            <ImageButton
+                                                Grid.Row="1"
+                                                Grid.Column="0"
+                                                Padding="8"
+                                                BackgroundColor="Transparent"
+                                                Clicked="Additem"
+                                                Source="check.png" />
+
+                                            <BoxView
+                                                Grid.Row="1"
+                                                Grid.Column="1"
+                                                BackgroundColor="#F0F1F3" />
+
+                                            <ImageButton
+                                                Grid.Row="1"
+                                                Grid.Column="2"
+                                                Padding="8"
+                                                BackgroundColor="Transparent"
+                                                Clicked="Close"
+                                                Source="close.png" />
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Grid>
+                    <!--  เสร็จสิ้น  -->
+                    <Grid Grid.Row="1">
+                        <BoxView BackgroundColor="White" CornerRadius="30,30,0,0" />
+
+                        <Button
+                            Margin="20,0,20,0"
+                            Padding="0"
+                            BackgroundColor="#FF7A21"
+                            Clicked="Finish"
+                            CornerRadius="50"
+                            FontFamily="Sarabun"
+                            FontSize="20"
+                            Text="เสร็จสิ้น"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

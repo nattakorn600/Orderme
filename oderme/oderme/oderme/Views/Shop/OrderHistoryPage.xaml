@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.Shop.OrderHistoryPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#E5E5E5"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="40,40,*">
+            <Grid Grid.Row="1" Margin="10,0">
+                <!--  Back Button  -->
+                <Frame
+                    Margin="0,0,5,0"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    HasShadow="False"
+                    HeightRequest="40"
+                    HorizontalOptions="Start"
+                    VerticalOptions="StartAndExpand">
+                    <ImageButton
+                        Padding="10"
+                        BackgroundColor="White"
+                        Clicked="BackButton"
+                        HorizontalOptions="End"
+                        Source="backbutton.png" />
+                </Frame>
+                <Label
+                    FontSize="20"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="ประวัติออเดอร์ทั้งหมด"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand" />
+            </Grid>
+
+
+            <!--  ออเดอร์  -->
+            <ScrollView
+                Grid.Row="2"
+                Margin="0,5,0,0"
+                VerticalScrollBarVisibility="Never">
+                <StackLayout
+                    Margin="20,20,20,10"
+                    BindableLayout.ItemsSource="{Binding Data}"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label
+                                    Margin="0,0,0,15"
+                                    FontSize="15"
+                                    Text="{Binding Date}"
+                                    TextColor="Black" />
+                                <Frame
+                                    Margin="0,0,0,15"
+                                    Padding="0"
+                                    BackgroundColor="White"
+                                    CornerRadius="10"
+                                    HasShadow="True">
+                                    <StackLayout BindableLayout.ItemsSource="{Binding Menus}">
+                                        <BindableLayout.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackLayout>
+                                                    <StackLayout Padding="15,5,15,5">
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label
+                                                                FontSize="15"
+                                                                Text="{Binding Order_Id}"
+                                                                TextColor="Black"
+                                                                VerticalOptions="CenterAndExpand" />
+                                                            <Label
+                                                                FontSize="10"
+                                                                HorizontalOptions="EndAndExpand"
+                                                                Text="{Binding Date}"
+                                                                TextColor="Black"
+                                                                VerticalOptions="StartAndExpand" />
+                                                        </StackLayout>
+
+                                                        <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal">
+                                                            <Label
+                                                                FontSize="16"
+                                                                Text="฿"
+                                                                TextColor="Black"
+                                                                VerticalOptions="CenterAndExpand" />
+                                                            <Label
+                                                                FontSize="16"
+                                                                HorizontalOptions="EndAndExpand"
+                                                                Text="{Binding Price}"
+                                                                TextColor="Black"
+                                                                VerticalOptions="CenterAndExpand" />
+                                                        </StackLayout>
+                                                        <ImageButton
+                                                            BackgroundColor="Transparent"
+                                                            Clicked="ArrowClick"
+                                                            CommandParameter="{Binding Order_Id}"
+                                                            HorizontalOptions="EndAndExpand"
+                                                            Rotation="{Binding Rotation}"
+                                                            Source="rightarrow.png"
+                                                            WidthRequest="12" />
+                                                    </StackLayout>
+
+                                                    <!--  แถบเทา  -->
+                                                    <StackLayout
+                                                        Padding="15,10,15,10"
+                                                        BackgroundColor="#F9FAFC"
+                                                        IsVisible="{Binding Visible}">
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label
+                                                                FontSize="12"
+                                                                Text="หมายเลขโต๊ะ"
+                                                                TextColor="#5B6E7C" />
+                                                            <Label
+                                                                FontSize="12"
+                                                                HorizontalOptions="EndAndExpand"
+                                                                Text="{Binding Table}"
+                                                                TextColor="Black" />
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label
+                                                                FontSize="12"
+                                                                Text="จำนวนเมนูที่สั่ง"
+                                                                TextColor="#5B6E7C" />
+                                                            <Label
+                                                                FontSize="12"
+                                                                HorizontalOptions="EndAndExpand"
+                                                                Text="{Binding Number}"
+                                                                TextColor="Black" />
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label
+                                                                FontSize="12"
+                                                                Text="การชำระเงิน"
+                                                                TextColor="#5B6E7C" />
+                                                            <Label
+                                                                FontSize="12"
+                                                                HorizontalOptions="EndAndExpand"
+                                                                Text="{Binding Payment}"
+                                                                TextColor="Black" />
+                                                        </StackLayout>
+                                                    </StackLayout>
+                                                    <BoxView
+                                                        Margin="20,0"
+                                                        BackgroundColor="#F0F1F3"
+                                                        HeightRequest="1"
+                                                        HorizontalOptions="CenterAndExpand"
+                                                        WidthRequest="500" />
+                                                </StackLayout>
+                                            </DataTemplate>
+                                        </BindableLayout.ItemTemplate>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.User.PayAgainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView>
+                <Grid RowDefinitions="auto,*,70">
+                    <Grid RowDefinitions="40,40,80,20" VerticalOptions="Start">
+                        <Image
+                            Grid.RowSpan="5"
+                            Aspect="AspectFill"
+                            BackgroundColor="#FF7A21" />
+
+                        <BoxView
+                            Grid.Row="4"
+                            BackgroundColor="#EFEFEF"
+                            CornerRadius="50,50,0,0"
+                            HeightRequest="40"
+                            VerticalOptions="EndAndExpand" />
+
+                        <StackLayout
+                            Grid.Row="1"
+                            Margin="10,0"
+                            Orientation="Horizontal">
+                            <!--  Back Button  -->
+                            <Frame
+                                Margin="0,0,5,0"
+                                Padding="0"
+                                BackgroundColor="White"
+                                CornerRadius="50"
+                                HasShadow="False"
+                                HeightRequest="40"
+                                HorizontalOptions="Start"
+                                VerticalOptions="StartAndExpand">
+                                <ImageButton
+                                    Padding="10"
+                                    BackgroundColor="White"
+                                    Clicked="BackButton"
+                                    HorizontalOptions="End"
+                                    Source="backbutton.png" />
+                            </Frame>
+                            <StackLayout Spacing="0" VerticalOptions="StartAndExpand">
+                                <Label
+                                    FontSize="18"
+                                    HorizontalTextAlignment="Start"
+                                    Text="ชำระเงิน"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Start" />
+
+                                <Label
+                                    FontSize="10"
+                                    HorizontalTextAlignment="Start"
+                                    Text="ร้านอาหาร 1"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </StackLayout>
+
+                        <Label
+                            Grid.Row="2"
+                            FontSize="25"
+                            HorizontalTextAlignment="Center"
+                            Text="โต๊ะหมายเลข 2"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+                    </Grid>
+
+                    <!--  หน้าชำระเงินออนไลน์  -->
+                    <StackLayout
+                        x:Name="PayPromptpayPage"
+                        Grid.Row="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Frame
+                            Margin="30,0"
+                            Padding="15"
+                            CornerRadius="20"
+                            HasShadow="True"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Grid RowDefinitions="auto,0.5*,4*,*,0.5*">
+                                <StackLayout Orientation="Horizontal" Spacing="20">
+                                    <Image HeightRequest="30" Source="Promptpay.png" />
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="18"
+                                        Text="พร้อมเพย์"
+                                        TextColor="#747474"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="Sarabun"
+                                        FontSize="15"
+                                        HorizontalOptions="StartAndExpand"
+                                        Text="โปรด Screenshot เพื่อบันทึก Qrcode"
+                                        TextColor="#FF7A21" />
+                                </StackLayout>
+
+
+                                <!--  Qrcode  -->
+                                <StackLayout Grid.Row="2">
+                                    <Image
+                                        x:Name="Prompt"
+                                        HorizontalOptions="FillAndExpand"
+                                        Source="https://promptpay.io/1669800248610/120.png"
+                                        VerticalOptions="FillAndExpand" />
+                                </StackLayout>
+
+                                <!--  ชื่อบัญชี  -->
+                                <StackLayout
+                                    Grid.Row="3"
+                                    Margin="40,0"
+                                    Spacing="0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label
+                                            FontFamily="Sarabun"
+                                            FontSize="15"
+                                            Text="ชื่อบัญชี :"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            x:Name="PromptName"
+                                            FontFamily="Sarabun"
+                                            FontSize="15"
+                                            MaxLines="1"
+                                            Text="ณัฐกร ขุนอาจ"
+                                            TextColor="Black" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label
+                                            FontFamily="Sarabun"
+                                            FontSize="15"
+                                            Text="หมายเลขบัญชี :"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            x:Name="PromptNumber"
+                                            FontFamily="Sarabun"
+                                            FontSize="15"
+                                            Text="1669800248610"
+                                            TextColor="Black" />
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <!--  จำนวนเงิน  -->
+                                <StackLayout
+                                    Grid.Row="4"
+                                    Margin="10,0"
+                                    Orientation="Horizontal"
+                                    Spacing="0">
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="20"
+                                        HorizontalOptions="StartAndExpand"
+                                        Text="จำนวนเงิน"
+                                        TextColor="Black" />
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="20"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="฿"
+                                        TextColor="Black" />
+                                    <Label
+                                        x:Name="TotalPrice"
+                                        FontFamily="Sarabun"
+                                        FontSize="20"
+                                        HorizontalOptions="End"
+                                        Text="120.00"
+                                        TextColor="Black" />
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+
+                        <!--  หลักฐานการโอน  -->
+                        <Label
+                            Margin="0,20,0,0"
+                            FontFamily="Sarabun"
+                            FontSize="20"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="อัพโหลดหลักฐานการโอน"
+                            TextColor="#FF7A21" />
+
+                        <Frame
+                            x:Name="FrameUpImage"
+                            Margin="20"
+                            Padding="20,10,20,5"
+                            CornerRadius="20"
+                            HorizontalOptions="Center">
+                            <ImageButton
+                                BackgroundColor="Transparent"
+                                Clicked="SelectImage"
+                                HeightRequest="60"
+                                Source="upload.png" />
+                        </Frame>
+
+                        <Frame
+                            x:Name="FrameImageUp"
+                            Margin="20"
+                            Padding="0"
+                            CornerRadius="20"
+                            HasShadow="False"
+                            HorizontalOptions="Center">
+                            <ImageButton
+                                x:Name="ImageUp"
+                                BackgroundColor="Transparent"
+                                Clicked="SelectImage" />
+                        </Frame>
+                    </StackLayout>
+
+                    <!--  ปุ่มชำระเงิน  -->
+                    <Grid Grid.Row="2">
+                        <BoxView BackgroundColor="White" CornerRadius="30,30,0,0" />
+
+                        <Button
+                            Margin="20,0,20,0"
+                            Padding="0"
+                            BackgroundColor="#FF7A21"
+                            Clicked="Finish"
+                            CornerRadius="50"
+                            FontFamily="Sarabun"
+                            FontSize="20"
+                            Text="เสร็จสิ้น"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+                    </Grid>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

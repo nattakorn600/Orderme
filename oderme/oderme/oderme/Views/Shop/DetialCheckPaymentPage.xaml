@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.Shop.DetialCheckPaymentPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView VerticalScrollBarVisibility="Never">
+                <Grid RowDefinitions="40,40,80,20,45,auto" VerticalOptions="Start">
+                    <Image
+                        Grid.RowSpan="5"
+                        Aspect="AspectFill"
+                        BackgroundColor="#FF7A21" />
+
+                    <BoxView
+                        Grid.Row="4"
+                        BackgroundColor="#EFEFEF"
+                        CornerRadius="50,50,0,0"
+                        HeightRequest="40"
+                        VerticalOptions="EndAndExpand" />
+
+                    <StackLayout
+                        Grid.Row="1"
+                        Margin="10,0"
+                        Orientation="Horizontal">
+                        <!--  Back Button  -->
+                        <Frame
+                            Margin="0,0,5,0"
+                            Padding="0"
+                            BackgroundColor="White"
+                            CornerRadius="50"
+                            HasShadow="False"
+                            HeightRequest="40"
+                            HorizontalOptions="Start"
+                            VerticalOptions="StartAndExpand">
+                            <ImageButton
+                                Padding="10"
+                                BackgroundColor="White"
+                                Clicked="BackButton"
+                                HorizontalOptions="End"
+                                Source="backbutton.png" />
+                        </Frame>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        Grid.Row="2"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal">
+                        <Label
+                            FontSize="25"
+                            HorizontalTextAlignment="Center"
+                            Text="โต๊ะหมายเลข"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+
+                        <Label
+                            FontSize="25"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Table}"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+                    </StackLayout>
+
+
+                    <!--  ออเดอร์  -->
+
+                    <StackLayout
+                        Grid.Row="4"
+                        Grid.RowSpan="2"
+                        Margin="0,20,0,0">
+                        <Grid Margin="30,20,30,0" ColumnDefinitions="*,*">
+                            <Label
+                                FontFamily="SaranbunReg"
+                                FontSize="18"
+                                Text="หมายเลขออเดอร์"
+                                TextColor="Black" />
+                            <Label
+                                Grid.Column="1"
+                                FontFamily="SaranbunReg"
+                                FontSize="18"
+                                HorizontalOptions="EndAndExpand"
+                                Text="{Binding Order_Id}"
+                                TextColor="Black" />
+                        </Grid>
+
+                        <Grid Margin="30,10,30,0" ColumnDefinitions="*,*,50">
+                            <Label
+                                FontFamily="SaranbunReg"
+                                FontSize="18"
+                                Text="ชำระเงินรวม"
+                                TextColor="Black" />
+                            <Label
+                                Grid.Column="1"
+                                FontAttributes="Bold"
+                                FontFamily="SaranbunReg"
+                                FontSize="20"
+                                HorizontalOptions="EndAndExpand"
+                                Text="{Binding Price}"
+                                TextColor="#FF7A21" />
+
+                            <Label
+                                Grid.Column="2"
+                                FontFamily="SaranbunReg"
+                                FontSize="18"
+                                HorizontalOptions="EndAndExpand"
+                                Text="บาท"
+                                TextColor="Black" />
+                        </Grid>
+
+                        <Frame
+                            Margin="20"
+                            Padding="0"
+                            CornerRadius="20"
+                            HasShadow="False"
+                            HorizontalOptions="Center">
+                            <Image BackgroundColor="Transparent" Source="{Binding Payment}" />
+                        </Frame>
+                    </StackLayout>
+
+
+                    <Grid
+                        Grid.Row="6"
+                        Margin="20"
+                        ColumnDefinitions="*,*">
+                        <Button
+                            Grid.Column="0"
+                            BackgroundColor="#FF7A21"
+                            Clicked="CancelBill"
+                            CornerRadius="30"
+                            FontFamily="SarabunReg"
+                            FontSize="20"
+                            Text="ชำระเงินไม่สำเร็จ"
+                            TextColor="White" />
+
+                        <Button
+                            Grid.Column="1"
+                            BackgroundColor="#FF7A21"
+                            Clicked="CheckBill"
+                            CornerRadius="30"
+                            FontFamily="SarabunReg"
+                            FontSize="20"
+                            Text="ชำระเงินเสร็จสิ้น"
+                            TextColor="White" />
+                    </Grid>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

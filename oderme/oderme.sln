@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oderme.Android", "oderme\oderme.Android\oderme.Android.csproj", "{BF74317D-FAE2-4370-B1FA-F3F42859D589}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oderme", "oderme\oderme\oderme.csproj", "{1CFA5204-4D63-4CF8-A299-E7573476FD0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF74317D-FAE2-4370-B1FA-F3F42859D589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF74317D-FAE2-4370-B1FA-F3F42859D589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF74317D-FAE2-4370-B1FA-F3F42859D589}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BF74317D-FAE2-4370-B1FA-F3F42859D589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF74317D-FAE2-4370-B1FA-F3F42859D589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF74317D-FAE2-4370-B1FA-F3F42859D589}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1CFA5204-4D63-4CF8-A299-E7573476FD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFA5204-4D63-4CF8-A299-E7573476FD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFA5204-4D63-4CF8-A299-E7573476FD0D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1CFA5204-4D63-4CF8-A299-E7573476FD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFA5204-4D63-4CF8-A299-E7573476FD0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CFA5204-4D63-4CF8-A299-E7573476FD0D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20F07FCD-C15B-49A1-9678-3704A0AF8201}
+	EndGlobalSection
+EndGlobal

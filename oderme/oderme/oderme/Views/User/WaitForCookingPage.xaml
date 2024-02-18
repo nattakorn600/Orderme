@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.User.WaitForCookingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="40,40,80,20,45,auto" VerticalOptions="Start">
+            <Image
+                Grid.RowSpan="5"
+                Aspect="AspectFill"
+                BackgroundColor="#FF7A21" />
+
+            <BoxView
+                Grid.Row="4"
+                BackgroundColor="#EFEFEF"
+                CornerRadius="50,50,0,0"
+                HeightRequest="40"
+                VerticalOptions="EndAndExpand" />
+
+            <StackLayout
+                Grid.Row="1"
+                Margin="10,0"
+                Orientation="Horizontal">
+                <!--  Back Button  -->
+                <Frame
+                    Margin="0,0,5,0"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    HasShadow="False"
+                    HeightRequest="40"
+                    HorizontalOptions="Start"
+                    VerticalOptions="StartAndExpand">
+                    <ImageButton
+                        Padding="10"
+                        BackgroundColor="White"
+                        Clicked="BackButton"
+                        HorizontalOptions="End"
+                        Source="backbutton.png" />
+                </Frame>
+
+            </StackLayout>
+
+            <Label
+                Grid.Row="2"
+                FontSize="25"
+                HorizontalTextAlignment="Center"
+                Text="รอการเตรียมอาหาร"
+                TextColor="White"
+                VerticalTextAlignment="Center" />
+
+            <!--  ออเดอร์  -->
+            <ScrollView
+                Grid.Row="4"
+                Grid.RowSpan="2"
+                Margin="0,20,0,0"
+                VerticalScrollBarVisibility="Never">
+                <StackLayout
+                    Margin="20"
+                    BindableLayout.ItemsSource="{Binding Order}"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Frame
+                                    Padding="10,15"
+                                    BackgroundColor="White"
+                                    CornerRadius="10"
+                                    HasShadow="False">
+                                    <Grid ColumnDefinitions="30,*" ColumnSpacing="10">
+                                        <Image Grid.Column="0" Source="clipboard.png" />
+
+                                        <!--  หมายเลขออเดอร์  -->
+                                        <Label
+                                            Grid.Column="1"
+                                            FontFamily="Sarabun"
+                                            FontSize="18"
+                                            Text="{Binding Order_Id}"
+                                            TextColor="Black" />
+                                    </Grid>
+                                </Frame>
+
+                                <Button
+                                    Clicked="GetDetailWait"
+                                    CommandParameter="{Binding Id}"
+                                    HorizontalOptions="FillAndExpand"
+                                    Opacity="0"
+                                    VerticalOptions="FillAndExpand" />
+                            </Grid>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

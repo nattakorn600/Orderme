@@ -1,0 +1,220 @@
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.csproj.AssemblyReference.cache
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\SettingGPSPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\LoadingPop.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\AddMenuPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\CheckPaymentPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\DetailMenuPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\DetialCheckPaymentPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\GenQrPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\HomePage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\OrderHistoryPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\OrderPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\ProfileShopPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\SlidePageUser.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\SlideShopPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\BuyOrderHistoryPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\CartFoodPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\CreateShopPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\DetailBuyOrderHistoryPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\DetailWaitForCookingPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\FoodDetailPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\InfoAndReviewPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\PayAgainPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\PaymentPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ProfilePage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ReviewPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ScanPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ShopPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitForCookingPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitForPayPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitReviewPage.xaml.g.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.AssemblyInfoInputs.cache
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.AssemblyInfo.cs
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.csproj.CoreCompileInputs.cache
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.deps.json
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.dll
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\bin\Debug\netstandard2.0\ref\oderme.dll
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.pdb
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.dll
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\ref\oderme.dll
+C:\Users\msi-pc\source\repos\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.pdb
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.deps.json
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.dll
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\ref\oderme.dll
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.pdb
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.csproj.AssemblyReference.cache
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\SettingGPSPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\LoadingPop.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\AddMenuPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\CheckPaymentPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\DetailMenuPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\DetialCheckPaymentPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\GenQrPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\HomePage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\OrderHistoryPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\OrderPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\ProfileShopPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\SlidePageUser.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\SlideShopPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\BuyOrderHistoryPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\CartFoodPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\CreateShopPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\DetailBuyOrderHistoryPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\DetailWaitForCookingPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\FoodDetailPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\InfoAndReviewPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\PayAgainPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\PaymentPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ProfilePage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ReviewPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ScanPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ShopPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitForCookingPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitForPayPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitReviewPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.AssemblyInfoInputs.cache
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.AssemblyInfo.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.csproj.CoreCompileInputs.cache
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.dll
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\ref\oderme.dll
+C:\Users\Nitro-5\Desktop\FinalProject\New 22-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.pdb
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.deps.json
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.dll
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\ref\oderme.dll
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.pdb
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.csproj.AssemblyReference.cache
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\SettingGPSPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\LoadingPop.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\AddMenuPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\CheckPaymentPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\DetailMenuPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\DetialCheckPaymentPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\GenQrPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\HomePage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\OrderHistoryPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\OrderPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\ProfileShopPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\SlidePageUser.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\SlideShopPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\BuyOrderHistoryPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\CartFoodPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\CreateShopPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\DetailBuyOrderHistoryPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\DetailWaitForCookingPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\FoodDetailPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\InfoAndReviewPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\PayAgainPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\PaymentPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ProfilePage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ReviewPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ScanPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ShopPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitForCookingPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitForPayPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitReviewPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.AssemblyInfoInputs.cache
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.AssemblyInfo.cs
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.csproj.CoreCompileInputs.cache
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.dll
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\ref\oderme.dll
+C:\Users\msi-pc\Downloads\oderme v.1 24-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.pdb
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.deps.json
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.dll
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\ref\oderme.dll
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.pdb
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.csproj.AssemblyReference.cache
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\SettingGPSPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\LoadingPop.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\AddMenuPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\CheckPaymentPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\DetailMenuPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\DetialCheckPaymentPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\GenQrPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\HomePage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\OrderHistoryPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\OrderPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\ProfileShopPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\SlidePageUser.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\SlideShopPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\BuyOrderHistoryPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\CartFoodPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\CreateShopPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\DetailBuyOrderHistoryPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\DetailWaitForCookingPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\FoodDetailPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\InfoAndReviewPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\PayAgainPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\PaymentPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ProfilePage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ReviewPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ScanPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ShopPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitForCookingPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitForPayPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitReviewPage.xaml.g.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.AssemblyInfoInputs.cache
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.AssemblyInfo.cs
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.csproj.CoreCompileInputs.cache
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.dll
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\ref\oderme.dll
+C:\Users\Nitro-5\Desktop\FinalProject\New 25-12-2021\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.pdb
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.deps.json
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.dll
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\bin\Debug\netstandard2.0\ref\oderme.dll
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\bin\Debug\netstandard2.0\oderme.pdb
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.csproj.AssemblyReference.cache
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\SettingGPSPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\LoadingPop.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\AddMenuPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\CheckPaymentPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\DetailMenuPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\DetialCheckPaymentPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\GenQrPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\HomePage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\OrderHistoryPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\OrderPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\Shop\ProfileShopPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\SlidePageUser.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\SlideShopPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\BuyOrderHistoryPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\CartFoodPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\CreateShopPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\DetailBuyOrderHistoryPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\DetailWaitForCookingPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\FoodDetailPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\InfoAndReviewPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\PayAgainPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\PaymentPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ProfilePage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ReviewPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ScanPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\ShopPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitForCookingPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitForPayPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\Views\User\WaitReviewPage.xaml.g.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.AssemblyInfoInputs.cache
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.AssemblyInfo.cs
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.csproj.CoreCompileInputs.cache
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.dll
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\ref\oderme.dll
+C:\Users\msi-pc\Downloads\oderme v.1 1-03-2022\oderme\oderme\oderme\obj\Debug\netstandard2.0\oderme.pdb

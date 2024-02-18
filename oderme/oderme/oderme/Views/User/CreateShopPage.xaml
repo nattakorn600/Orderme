@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.User.CreateShopPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Controls="clr-namespace:oderme.Controls"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <Grid RowDefinitions="auto,*">
+                <Grid
+                    RowDefinitions="40,40,85,75,40,auto"
+                    RowSpacing="1.5"
+                    VerticalOptions="Start">
+                    <!--  ปกร้าน  -->
+                    <Grid Grid.RowSpan="5">
+                        <ImageButton
+                            Padding="180,100,180,150"
+                            Aspect="AspectFill"
+                            BackgroundColor="#FF7A21"
+                            Source="upload.png" />
+                        <ImageButton
+                            x:Name="ImageCover"
+                            Padding="180,100,180,150"
+                            Aspect="AspectFill"
+                            BackgroundColor="Transparent"
+                            Clicked="SelCover" />
+                    </Grid>
+
+
+                    <BoxView
+                        Grid.Row="4"
+                        BackgroundColor="#EFEFEF"
+                        CornerRadius="50,50,0,0"
+                        HeightRequest="40"
+                        VerticalOptions="EndAndExpand" />
+                    <StackLayout
+                        Grid.Row="1"
+                        Margin="10,0"
+                        Orientation="Horizontal">
+                        <!--  Back Button  -->
+
+                        <Frame
+                            Margin="0,0,5,0"
+                            Padding="0"
+                            BackgroundColor="White"
+                            CornerRadius="50"
+                            HasShadow="False"
+                            HeightRequest="40"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="StartAndExpand">
+                            <ImageButton
+                                Padding="10"
+                                BackgroundColor="White"
+                                Clicked="BackButton"
+                                HorizontalOptions="End"
+                                Source="backbutton.png" />
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout
+                        Grid.Row="3"
+                        Grid.RowSpan="3"
+                        VerticalOptions="FillAndExpand">
+                        <!--  โปรไฟล์ร้าน  -->
+                        <Frame
+                            Padding="0,0,0,0"
+                            BackgroundColor="White"
+                            CornerRadius="500"
+                            HasShadow="True"
+                            HeightRequest="150"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="150">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="SelProShop" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Image
+                                    Margin="45,40,35,40"
+                                    Aspect="AspectFill"
+                                    HorizontalOptions="FillAndExpand"
+                                    Source="createshop.png"
+                                    VerticalOptions="FillAndExpand" />
+
+                                <Image
+                                    x:Name="ImageShop"
+                                    Margin="45,40,35,40"
+                                    Aspect="AspectFill"
+                                    BackgroundColor="Transparent"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand" />
+                            </Grid>
+
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+
+                <StackLayout Grid.Row="1">
+                    <!--  ชื่อร้าน  -->
+                    <Frame
+                        Margin="60,20"
+                        Padding="5"
+                        BorderColor="#FF7A21"
+                        CornerRadius="15"
+                        HasShadow="False"
+                        HorizontalOptions="FillAndExpand">
+                        <Controls:CustomEntry
+                            x:Name="NameShop"
+                            FontFamily="Sarabun"
+                            FontSize="20"
+                            HorizontalTextAlignment="Center"
+                            Placeholder="ชื่อร้าน"
+                            PlaceholderColor="#FF7A21"
+                            Text="{Binding Name}" />
+                    </Frame>
+
+                    <!--  PromptPayName  -->
+                    <Grid Margin="20,20,20,10" ColumnDefinitions="0.8*,1.2*">
+                        <Label
+                            FontFamily="Sarabun"
+                            FontSize="18"
+                            Text="ชื่อพร้อมเพย์"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center" />
+                        <Frame
+                            Grid.Column="1"
+                            Padding="5"
+                            CornerRadius="15"
+                            HasShadow="False"
+                            HorizontalOptions="FillAndExpand">
+                            <Controls:CustomEntry
+                                x:Name="NamePromptpay"
+                                FontFamily="Sarabun"
+                                FontSize="15"
+                                HorizontalTextAlignment="Center"
+                                Placeholder="xxxx xxxx"
+                                PlaceholderColor="#A5A5A5"
+                                Text="{Binding Promptpay_Name}" />
+                        </Frame>
+                    </Grid>
+
+                    <!--  PromptPayNumber  -->
+                    <Grid Margin="20,0,20,0" ColumnDefinitions="0.8*,1.2*">
+                        <Label
+                            FontFamily="Sarabun"
+                            FontSize="18"
+                            Text="หมายเลขพร้อมเพย์"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center" />
+                        <Frame
+                            Grid.Column="1"
+                            Padding="5"
+                            CornerRadius="15"
+                            HasShadow="False"
+                            HorizontalOptions="FillAndExpand">
+                            <Controls:CustomEntry
+                                x:Name="NumPromptpay"
+                                FontFamily="Sarabun"
+                                FontSize="15"
+                                HorizontalTextAlignment="Center"
+                                Keyboard="Numeric"
+                                Placeholder="XXX-XXXXXXX "
+                                PlaceholderColor="#A5A5A5"
+                                Text="{Binding Promptpay_Number}" />
+                        </Frame>
+                    </Grid>
+
+                    <Frame
+                        Margin="20,50"
+                        Padding="20,10"
+                        BackgroundColor="#FF7A21"
+                        CornerRadius="10"
+                        HasShadow="False"
+                        HorizontalOptions="FillAndExpand">
+                        <Grid RowDefinitions="*,2*,10*,1.5*" RowSpacing="30">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Image HeightRequest="20" Source="pinshop.png" />
+                                <Label
+                                    FontFamily="Sarabun"
+                                    FontSize="20"
+                                    Text="ตำแหน่งที่ตั้งร้าน"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+                            </StackLayout>
+
+                            <!--  ที่อยู่ร้าน  -->
+                            <Grid
+                                Grid.Row="1"
+                                ColumnDefinitions="auto,*"
+                                ColumnSpacing="20">
+                                <Label
+                                    FontFamily="Sarabun"
+                                    FontSize="18"
+                                    Text="ที่อยู่ร้าน"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+
+                                <Frame
+                                    Grid.Column="1"
+                                    Padding="15,0"
+                                    BackgroundColor="White"
+                                    CornerRadius="20"
+                                    HasShadow="False"
+                                    HorizontalOptions="FillAndExpand">
+                                    <Controls:CustomEditor
+                                        x:Name="NameAddress"
+                                        BackgroundColor="White"
+                                        FontFamily="Sarabun"
+                                        FontSize="18"
+                                        Placeholder="เลขที่ xx  ตำบล xxxx  อำเภอ xxxx  จังหวัด xxxx xxxxx"
+                                        PlaceholderColor="#A5A5A5"
+                                        Text="{Binding Address}" />
+                                </Frame>
+                            </Grid>
+
+                            <!--  แมพ  -->
+                            <Frame
+                                Grid.Row="2"
+                                Padding="0"
+                                CornerRadius="10"
+                                HasShadow="False">
+                                <maps:Map
+                                    x:Name="map"
+                                    HorizontalOptions="FillAndExpand"
+                                    IsShowingUser="False"
+                                    MapClicked="OnMapClicked"
+                                    MapType="Street"
+                                    VerticalOptions="FillAndExpand" />
+                            </Frame>
+
+                            <StackLayout
+                                Grid.Row="3"
+                                Orientation="Horizontal"
+                                Spacing="20">
+                                <!--  ปุ่มเลือกตำแหน่งปัจจุบัน  -->
+                                <StackLayout>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="SelectLocation" />
+                                    </StackLayout.GestureRecognizers>
+                                    <Frame
+                                        Padding="0"
+                                        BackgroundColor="#EFEFEF"
+                                        CornerRadius="50"
+                                        HasShadow="False"
+                                        HeightRequest="30"
+                                        HorizontalOptions="Start"
+                                        Scale="0.8"
+                                        VerticalOptions="CenterAndExpand"
+                                        WidthRequest="30">
+
+
+                                        <BoxView
+                                            x:Name="btnRadio"
+                                            BackgroundColor="#FF7A21"
+                                            CornerRadius="10"
+                                            HeightRequest="20"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                            WidthRequest="20" />
+                                    </Frame>
+                                </StackLayout>
+
+
+                                <StackLayout Spacing="0">
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="15"
+                                        HorizontalOptions="Start"
+                                        Text="ที่อยู่ปัจจุบัน"
+                                        TextColor="Black"
+                                        VerticalOptions="Start" />
+
+                                    <Label
+                                        x:Name="Proven"
+                                        FontFamily="Sarabun"
+                                        FontSize="12"
+                                        HorizontalOptions="Start"
+                                        Text="ไม่พบที่อยู่ปัจจุบัน"
+                                        TextColor="Black"
+                                        VerticalOptions="End" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+
+                    <StackLayout>
+                        <Button
+                            Margin="10,0,10,10"
+                            Padding="10"
+                            BackgroundColor="#FF7A21"
+                            Clicked="CreateShop"
+                            CornerRadius="50"
+                            FontSize="20"
+                            Text="เพิ่มร้าน" />
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

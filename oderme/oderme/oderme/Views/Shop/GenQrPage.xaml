@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.Shop.GenQrPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:oderme.Controls"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Frame
+                Padding="0"
+                BackgroundColor="#FF7A21"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand">
+                <StackLayout Margin="10,40,10,0" Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <!--  Back Button  -->
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="White"
+                            CornerRadius="50"
+                            HasShadow="False"
+                            HeightRequest="40"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="StartAndExpand">
+                            <ImageButton
+                                Padding="10"
+                                BackgroundColor="White"
+                                Clicked="BackButton"
+                                HorizontalOptions="End"
+                                Source="backbutton.png" />
+                        </Frame>
+                    </StackLayout>
+
+                    <Label
+                        Margin="0,30,0,40"
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="สร้าง QR Code"
+                        TextColor="White" />
+
+                    <Frame
+                        Margin="25,0,25,25"
+                        BackgroundColor="#F7F7F7"
+                        CornerRadius="25"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <StackLayout>
+                            <Label
+                                x:Name="ShopName"
+                                FontSize="25"
+                                HorizontalOptions="CenterAndExpand"
+                                TextColor="Black" />
+
+                            <Frame
+                                Margin="20,10,20,10"
+                                Padding="0"
+                                BackgroundColor="White"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand">
+                                <Image
+                                    x:Name="QrCodes"
+                                    HeightRequest="245"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="245" />
+                            </Frame>
+
+                            <StackLayout Margin="20,5,20,0" Orientation="Horizontal">
+                                <Label
+                                    FontSize="20"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="โต๊ะหมายเลข"
+                                    TextColor="Black" />
+                                <Label
+                                    x:Name="Tables"
+                                    FontSize="20"
+                                    HorizontalOptions="EndAndExpand"
+                                    TextColor="Black" />
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+
+                    <StackLayout
+                        Margin="50,0,50,0"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal">
+                        <Frame
+                            Margin="0,0,10,0"
+                            Padding="6"
+                            BackgroundColor="White"
+                            CornerRadius="100"
+                            HorizontalOptions="StartAndExpand">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ReFreshQr" />
+                            </Frame.GestureRecognizers>
+                            <Image
+                                Margin="1.5,0,1.5,3"
+                                HorizontalOptions="CenterAndExpand"
+                                Source="refresh.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="30" />
+                        </Frame>
+
+                        <Frame
+                            Padding="6"
+                            BackgroundColor="White"
+                            CornerRadius="100"
+                            HorizontalOptions="EndAndExpand">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="DownloadQr" />
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image
+                                    Margin="1.5,0,1.5,0"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Source="downloads.png"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="30" />
+                                <Label
+                                    Margin="0,0,10,0"
+                                    FontSize="18"
+                                    Text="ดาวน์โหลด"
+                                    TextColor="#FF7A21"
+                                    VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                x:Name="BG"
+                BackgroundColor="Black"
+                Opacity="0.9" />
+            <Frame
+                x:Name="DOC"
+                Padding="20"
+                CornerRadius="20"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="300">
+                <StackLayout>
+                    <Label
+                        CharacterSpacing="0.5"
+                        FontSize="22"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="โปรดระบุหมายเลขโต๊ะ"
+                        TextColor="Black" />
+
+                    <StackLayout
+                        Margin="0,20,0,20"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal">
+                        <Image
+                            HorizontalOptions="CenterAndExpand"
+                            Source="chair.png"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="50" />
+                        <Frame
+                            Margin="10,0,0,0"
+                            Padding="5"
+                            BorderColor="#424242"
+                            CornerRadius="10"
+                            HasShadow="False"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="80">
+                            <controls:CustomEntry
+                                x:Name="Table"
+                                FontSize="20"
+                                HorizontalOptions="CenterAndExpand"
+                                HorizontalTextAlignment="Center"
+                                Placeholder="15"
+                                PlaceholderColor="#A5A5A5"
+                                VerticalTextAlignment="Center"
+                                WidthRequest="80" />
+                        </Frame>
+                    </StackLayout>
+
+                    <Label
+                        x:Name="AlertText"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        IsVisible="false"
+                        Text="ท่านยังไม่ได้ระบุหมายเลขโต๊ะ โปรดระบุหมายเลขโต๊ะก่อนกดสร้าง QR Code"
+                        TextColor="red" />
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            BackgroundColor="#FF7A21"
+                            Clicked="Cancel"
+                            CornerRadius="10"
+                            FontSize="15"
+                            HeightRequest="40"
+                            HorizontalOptions="StartAndExpand"
+                            Text="ยกเลิก"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="110" />
+
+                        <Button
+                            BackgroundColor="#FF7A21"
+                            Clicked="Create"
+                            CornerRadius="10"
+                            FontSize="13"
+                            HeightRequest="40"
+                            HorizontalOptions="EndAndExpand"
+                            Text="สร้าง QR Code"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="110" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

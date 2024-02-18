@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.User.ProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#EFEFEF">
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <!--  navi  -->
+                <Frame
+                    Padding="0"
+                    BackgroundColor="#FF7A21"
+                    HasShadow="False"
+                    HorizontalOptions="FillAndExpand">
+                    <Grid RowDefinitions="*,auto">
+                        <BoxView
+                            Grid.Row="1"
+                            BackgroundColor="#EFEFEF"
+                            CornerRadius="50,50,0,0"
+                            HeightRequest="40"
+                            VerticalOptions="EndAndExpand" />
+                        <StackLayout Margin="10,40,10,0" Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <!--  Back Button  -->
+                                <Frame
+                                    Margin="0,0,0,0"
+                                    Padding="0"
+                                    BackgroundColor="White"
+                                    CornerRadius="50"
+                                    HasShadow="False"
+                                    HeightRequest="40"
+                                    HorizontalOptions="EndAndExpand"
+                                    VerticalOptions="StartAndExpand">
+                                    <ImageButton
+                                        Padding="10"
+                                        BackgroundColor="White"
+                                        Clicked="OnBackBtn"
+                                        HorizontalOptions="End"
+                                        Rotation="180"
+                                        Source="backbutton.png" />
+                                </Frame>
+                            </StackLayout>
+
+                            <Grid ColumnDefinitions="auto,*">
+                                <!--  Profile  -->
+                                <Frame
+                                    Margin="20,30"
+                                    Padding="0"
+                                    BackgroundColor="White"
+                                    CornerRadius="100"
+                                    HasShadow="False"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand">
+                                    <Image
+                                        x:Name="Picture"
+                                        BackgroundColor="White"
+                                        HeightRequest="90"
+                                        HorizontalOptions="End"
+                                        Source="profile.png"
+                                        WidthRequest="90" />
+                                </Frame>
+                                <Label
+                                    x:Name="Name"
+                                    Grid.Column="1"
+                                    FontAttributes="Bold"
+                                    FontFamily="Ssrabun"
+                                    FontSize="18"
+                                    Text="Firstname Lastname"
+                                    TextColor="White"
+                                    VerticalOptions="CenterAndExpand" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+                <StackLayout Margin="10,0,10,0" Spacing="10">
+                    <!--  Status  -->
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Frame
+                            Padding="5,10,5,5"
+                            CornerRadius="10"
+                            HasShadow="False"
+                            HorizontalOptions="FillAndExpand">
+                            <Grid ColumnDefinitions="*,10,*,10,*,10,*">
+                                <!--  รอชำระ  -->
+                                <StackLayout Grid.Column="0" HorizontalOptions="FillAndExpand">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="GoToWaitPay" />
+                                    </StackLayout.GestureRecognizers>
+                                    <Image
+                                        HeightRequest="30"
+                                        HorizontalOptions="Center"
+                                        Source="waitpay1.png" />
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="10"
+                                        HorizontalTextAlignment="Center"
+                                        Text="รอการชำระเงิน"
+                                        TextColor="Black" />
+
+                                    <Label
+                                        x:Name="WaitPayStatus"
+                                        FontFamily="Sarabun"
+                                        FontSize="30"
+                                        HorizontalOptions="Center"
+                                        Text="0"
+                                        TextColor="#FF7A21"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                                <Image
+                                    Grid.Column="1"
+                                    Margin="0,20"
+                                    BackgroundColor="Transparent"
+                                    Source="rightarrow.png"
+                                    VerticalOptions="StartAndExpand" />
+
+
+                                <!--  รออาหาร  -->
+                                <StackLayout Grid.Column="2" HorizontalOptions="FillAndExpand">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="GoToWaitForCooking" />
+                                    </StackLayout.GestureRecognizers>
+                                    <Image
+                                        HeightRequest="30"
+                                        HorizontalOptions="Center"
+                                        Scale="1.2"
+                                        Source="waitfood.png" />
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="10"
+                                        HorizontalTextAlignment="Center"
+                                        Text="รอการเตรียมอาหาร"
+                                        TextColor="Black" />
+
+                                    <Label
+                                        x:Name="WaitCookStatus"
+                                        FontFamily="Sarabun"
+                                        FontSize="30"
+                                        HorizontalOptions="Center"
+                                        Text="0"
+                                        TextColor="#FF7A21"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                                <Image
+                                    Grid.Column="3"
+                                    Margin="0,20"
+                                    BackgroundColor="Transparent"
+                                    Source="rightarrow.png"
+                                    VerticalOptions="StartAndExpand" />
+
+                                <!--  กำลังเตรียมอาหาร  -->
+                                <StackLayout Grid.Column="4" HorizontalOptions="FillAndExpand">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="GoToCooking" />
+                                    </StackLayout.GestureRecognizers>
+                                    <Image
+                                        HeightRequest="30"
+                                        HorizontalOptions="Center"
+                                        Scale="1.2"
+                                        Source="fryingpan.png" />
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="10"
+                                        HorizontalTextAlignment="Center"
+                                        Text="กำลังเตรียมอาหาร"
+                                        TextColor="Black" />
+
+                                    <Label
+                                        x:Name="WaitCookingStatus"
+                                        FontFamily="Sarabun"
+                                        FontSize="30"
+                                        HorizontalOptions="Center"
+                                        Text="0"
+                                        TextColor="#FF7A21"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                                <Image
+                                    Grid.Column="5"
+                                    Margin="0,20"
+                                    BackgroundColor="Transparent"
+                                    Source="rightarrow.png"
+                                    VerticalOptions="StartAndExpand" />
+
+                                <!--  รีวิว  -->
+                                <StackLayout Grid.Column="6" HorizontalOptions="FillAndExpand">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="GoToReview" />
+                                    </StackLayout.GestureRecognizers>
+                                    <Image
+                                        HeightRequest="30"
+                                        HorizontalOptions="Center"
+                                        Scale="0.8"
+                                        Source="favorite.png" />
+                                    <Label
+                                        FontFamily="Sarabun"
+                                        FontSize="10"
+                                        HorizontalTextAlignment="Center"
+                                        Text="รอการรีวิว"
+                                        TextColor="Black" />
+
+                                    <Label
+                                        x:Name="ReviewStatus"
+                                        FontFamily="Sarabun"
+                                        FontSize="30"
+                                        HorizontalOptions="Center"
+                                        Text="0"
+                                        TextColor="#FF7A21"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+                            </Grid>
+
+                        </Frame>
+                    </StackLayout>
+
+
+                    <!--  email  -->
+                    <Frame
+                        Margin="0,20,0,0"
+                        Padding="20,5,5,5"
+                        CornerRadius="10"
+                        HasShadow="False">
+                        <StackLayout Orientation="Horizontal" Spacing="20">
+                            <Image
+                                HeightRequest="25"
+                                HorizontalOptions="Start"
+                                Source="email.png" />
+                            <Label
+                                x:Name="emailText"
+                                FontFamily="Sarabun"
+                                FontSize="20"
+                                HorizontalOptions="StartAndExpand"
+                                Text="example@email.com"
+                                TextColor="Black"
+                                VerticalTextAlignment="Center" />
+
+                            <ImageButton
+                                Padding="10"
+                                BackgroundColor="Transparent"
+                                HeightRequest="35"
+                                HorizontalOptions="EndAndExpand"
+                                Rotation="90"
+                                Source="rightarrow.png"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </Frame>
+
+                    <!--  tel  -->
+                    <Frame
+                        Padding="20,5,5,5"
+                        CornerRadius="10"
+                        HasShadow="False">
+                        <StackLayout Orientation="Horizontal" Spacing="20">
+                            <Image
+                                Margin="0,0,5,0"
+                                HeightRequest="20"
+                                HorizontalOptions="Start"
+                                Source="phonecall.png" />
+                            <Label
+                                FontFamily="Sarabun"
+                                FontSize="20"
+                                HorizontalOptions="StartAndExpand"
+                                Text="xxx-xxxxxxx"
+                                TextColor="Black"
+                                VerticalTextAlignment="Center" />
+
+                            <ImageButton
+                                Padding="10"
+                                BackgroundColor="Transparent"
+                                HeightRequest="35"
+                                HorizontalOptions="EndAndExpand"
+                                Rotation="90"
+                                Source="rightarrow.png"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </Frame>
+
+                    <!--  shop  -->
+                    <Frame
+                        Margin="0,20"
+                        Padding="20,5,5,5"
+                        CornerRadius="10"
+                        HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GotoCreateShop" />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal" Spacing="20">
+                            <Image
+                                Margin="0,0,5,0"
+                                HeightRequest="20"
+                                HorizontalOptions="Start"
+                                Source="store.png" />
+                            <Label
+                                x:Name="SelStart"
+                                FontFamily="Sarabun"
+                                FontSize="18"
+                                HorizontalOptions="StartAndExpand"
+                                Text="เริ่มการขาย"
+                                TextColor="#FF7A21"
+                                VerticalTextAlignment="Center" />
+
+                            <ImageButton
+                                Padding="10"
+                                BackgroundColor="Transparent"
+                                HeightRequest="35"
+                                HorizontalOptions="EndAndExpand"
+                                Source="rightarrow.png"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </Frame>
+
+                    <!--  Order History  -->
+                    <Frame
+                        Padding="20,5,5,5"
+                        CornerRadius="10"
+                        HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GotoOrderHistory" />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal" Spacing="20">
+                            <Image
+                                Margin="0,0,5,0"
+                                HeightRequest="20"
+                                HorizontalOptions="Start"
+                                Source="history.png" />
+                            <Label
+                                FontFamily="Sarabun"
+                                FontSize="18"
+                                HorizontalOptions="StartAndExpand"
+                                Text="ประวัติการสั่งซื้อ"
+                                TextColor="black"
+                                VerticalTextAlignment="Center" />
+
+                            <ImageButton
+                                Padding="10"
+                                BackgroundColor="Transparent"
+                                HeightRequest="35"
+                                HorizontalOptions="EndAndExpand"
+                                Source="rightarrow.png"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </Frame>
+
+                    <!--  distance  -->
+                    <Frame
+                        Padding="30,20"
+                        CornerRadius="10"
+                        HasShadow="False">
+                        <StackLayout Orientation="Vertical" Spacing="20">
+                            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                                <Label
+                                    FontFamily="Sarabun"
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="ระยะการค้นหาร้าน"
+                                    TextColor="#FF7A21"
+                                    VerticalTextAlignment="Center" />
+
+                                <Label
+                                    x:Name="distance"
+                                    FontFamily="Sarabun"
+                                    FontSize="18"
+                                    HorizontalOptions="EndAndExpand"
+                                    HorizontalTextAlignment="End"
+                                    TextColor="Black"
+                                    VerticalTextAlignment="Center" />
+
+                                <Label
+                                    x:Name="unit"
+                                    FontFamily="Sarabun"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    HorizontalTextAlignment="End"
+                                    Text="กิโลเมตร"
+                                    TextColor="Black"
+                                    VerticalTextAlignment="Center" />
+                            </StackLayout>
+
+                            <Slider
+                                x:Name="Sliderr"
+                                HorizontalOptions="FillAndExpand"
+                                Maximum="10"
+                                MaximumTrackColor="#DDDDDD"
+                                Minimum="1"
+                                MinimumTrackColor="#FF7A21"
+                                ThumbColor="#FF7A21"
+                                ValueChanged="OnSliderValueChanged" />
+
+
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Margin="0,50">
+                    <Button
+                        Padding="30,10"
+                        BackgroundColor="#FF7A21"
+                        Clicked="OnLogout"
+                        CornerRadius="30"
+                        FontFamily="Sarabun"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="ออกจากระบบ"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

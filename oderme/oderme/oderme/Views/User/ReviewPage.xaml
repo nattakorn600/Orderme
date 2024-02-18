@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.User.ReviewPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:oderme.Controls"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="*,70">
+            <Grid
+                Grid.Row="0"
+                RowDefinitions="40,40,80,20,45,*"
+                VerticalOptions="FillAndExpand">
+                <Image
+                    Grid.RowSpan="5"
+                    Aspect="AspectFill"
+                    BackgroundColor="#FF7A21" />
+
+                <BoxView
+                    Grid.Row="4"
+                    BackgroundColor="#EFEFEF"
+                    CornerRadius="50,50,0,0"
+                    HeightRequest="40"
+                    VerticalOptions="EndAndExpand" />
+
+                <StackLayout
+                    Grid.Row="1"
+                    Margin="10,0"
+                    Orientation="Horizontal">
+                    <!--  Back Button  -->
+                    <Frame
+                        Margin="0,0,5,0"
+                        Padding="0"
+                        BackgroundColor="White"
+                        CornerRadius="50"
+                        HasShadow="False"
+                        HeightRequest="40"
+                        HorizontalOptions="Start"
+                        VerticalOptions="StartAndExpand">
+                        <ImageButton
+                            Padding="10"
+                            BackgroundColor="White"
+                            Clicked="BackButton"
+                            HorizontalOptions="End"
+                            Source="backbutton.png" />
+                    </Frame>
+
+                </StackLayout>
+
+                <Label
+                    Grid.Row="2"
+                    FontFamily="SarabunReg"
+                    FontSize="25"
+                    HorizontalTextAlignment="Center"
+                    Text="การรีวิว"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+
+                <StackLayout
+                    Grid.Row="4"
+                    Grid.RowSpan="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Frame
+                        Margin="20,30,20,20"
+                        BackgroundColor="white"
+                        CornerRadius="30"
+                        HasShadow="False"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout Spacing="20">
+                            <StackLayout Orientation="Horizontal">
+                                <Image
+                                    Margin="5,0"
+                                    HeightRequest="18"
+                                    Source="stars.png" />
+
+                                <Label
+                                    FontFamily="Sarabun"
+                                    FontSize="18"
+                                    Text="รีวิว"
+                                    TextColor="#FF7A21" />
+                            </StackLayout>
+
+                            <Frame
+                                Padding="5"
+                                BorderColor="Black"
+                                CornerRadius="10"
+                                HasShadow="False">
+                                <control:CustomEditor
+                                    x:Name="Comment"
+                                    FontSize="15"
+                                    HeightRequest="150"
+                                    Placeholder="แสดงความคิดเห็น"
+                                    PlaceholderColor="#CECECE" />
+                            </Frame>
+
+                            <StackLayout
+                                HeightRequest="30"
+                                HorizontalOptions="CenterAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <ImageButton
+                                    x:Name="star1"
+                                    BackgroundColor="Transparent"
+                                    Clicked="ChangeStar1"
+                                    Source="star.png" />
+                                <ImageButton
+                                    x:Name="star2"
+                                    BackgroundColor="Transparent"
+                                    Clicked="ChangeStar2"
+                                    Source="star.png" />
+                                <ImageButton
+                                    x:Name="star3"
+                                    BackgroundColor="Transparent"
+                                    Clicked="ChangeStar3"
+                                    Source="star.png" />
+                                <ImageButton
+                                    x:Name="star4"
+                                    BackgroundColor="Transparent"
+                                    Clicked="ChangeStar4"
+                                    Source="star.png" />
+                                <ImageButton
+                                    x:Name="star5"
+                                    BackgroundColor="Transparent"
+                                    Clicked="ChangeStar5"
+                                    Source="star.png" />
+
+                                <Label x:Name="value" IsVisible="false" />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+            </Grid>
+
+            <!--  ปุ่มชำระเงิน  -->
+            <Grid Grid.Row="1">
+                <BoxView BackgroundColor="White" CornerRadius="30,30,0,0" />
+
+                <Button
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    BackgroundColor="#FF7A21"
+                    Clicked="Finish"
+                    CornerRadius="50"
+                    FontFamily="Sarabun"
+                    FontSize="20"
+                    Text="เสร็จสิ้น"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+            </Grid>
+
+
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.User.WaitForPayPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="40,40,80,20,45,auto" VerticalOptions="Start">
+            <Image
+                Grid.RowSpan="5"
+                Aspect="AspectFill"
+                BackgroundColor="#FF7A21" />
+
+            <BoxView
+                Grid.Row="4"
+                BackgroundColor="#EFEFEF"
+                CornerRadius="50,50,0,0"
+                HeightRequest="40"
+                VerticalOptions="EndAndExpand" />
+
+            <StackLayout
+                Grid.Row="1"
+                Margin="10,0"
+                Orientation="Horizontal">
+                <!--  Back Button  -->
+                <Frame
+                    Margin="0,0,5,0"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    HasShadow="False"
+                    HeightRequest="40"
+                    HorizontalOptions="Start"
+                    VerticalOptions="StartAndExpand">
+                    <ImageButton
+                        Padding="10"
+                        BackgroundColor="White"
+                        Clicked="BackButton"
+                        HorizontalOptions="End"
+                        Source="backbutton.png" />
+                </Frame>
+
+            </StackLayout>
+
+            <Label
+                Grid.Row="2"
+                FontFamily="SarabunReg"
+                FontSize="25"
+                HorizontalTextAlignment="Center"
+                Text="รอการชำระเงิน"
+                TextColor="White"
+                VerticalTextAlignment="Center" />
+
+            <ScrollView
+                Grid.Row="4"
+                Grid.RowSpan="2"
+                Margin="0,20,0,0"
+                VerticalScrollBarVisibility="Never">
+                <StackLayout
+                    Margin="10,20,10,20"
+                    Padding="0,0,0,20"
+                    BindableLayout.ItemsSource="{Binding Order}"
+                    Spacing="20"
+                    VerticalOptions="FillAndExpand">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                Padding="0"
+                                BackgroundColor="white"
+                                CornerRadius="10"
+                                HasShadow="False">
+                                <StackLayout>
+                                    <StackLayout
+                                        Padding="10,7"
+                                        BackgroundColor="#FF7A21"
+                                        Orientation="Horizontal">
+                                        <Label
+                                            FontFamily="SarabunReg"
+                                            Text="หมายยเลขออเดอร์"
+                                            TextColor="White" />
+
+                                        <Label
+                                            x:Name="NOrder"
+                                            FontFamily="SarabunReg"
+                                            HorizontalOptions="StartAndExpand"
+                                            Text="{Binding Order_Id}"
+                                            TextColor="White" />
+
+                                        <Label
+                                            FontFamily="SarabunReg"
+                                            Text="ที่ต้องชำระ"
+                                            TextColor="White" />
+                                    </StackLayout>
+
+                                    <StackLayout Margin="20">
+                                        <StackLayout BindableLayout.ItemsSource="{Binding Menus}">
+                                            <BindableLayout.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid ColumnDefinitions="7*,*,*" ColumnSpacing="20">
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <!--  รูป  -->
+                                                            <Frame
+                                                                Padding="0"
+                                                                BackgroundColor="Black"
+                                                                CornerRadius="100">
+                                                                <Image
+                                                                    HeightRequest="60"
+                                                                    Scale="1.3"
+                                                                    Source="{Binding Image}"
+                                                                    WidthRequest="60" />
+                                                            </Frame>
+
+                                                            <StackLayout Spacing="-5" VerticalOptions="CenterAndExpand">
+                                                                <!--  ชื่ออาหาร  -->
+                                                                <Label
+                                                                    FontFamily="SarabunReg"
+                                                                    FontSize="15"
+                                                                    Text="{Binding Name}"
+                                                                    TextColor="Black" />
+
+                                                                <!--  ประเภทอาหาร  -->
+                                                                <Label
+                                                                    FontFamily="SarabunReg"
+                                                                    FontSize="10"
+                                                                    Text="{Binding Type}"
+                                                                    TextColor="#939393" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+
+
+                                                        <!--  จำนวน  -->
+                                                        <Label
+                                                            Grid.Column="1"
+                                                            FontFamily="SarabunReg"
+                                                            FontSize="15"
+                                                            HorizontalOptions="StartAndExpand"
+                                                            Text="{Binding Number}"
+                                                            TextColor="Black"
+                                                            VerticalOptions="CenterAndExpand" />
+
+
+                                                        <StackLayout
+                                                            Grid.Column="2"
+                                                            HorizontalOptions="EndAndExpand"
+                                                            Orientation="Horizontal"
+                                                            Spacing="2"
+                                                            VerticalOptions="CenterAndExpand">
+                                                            <Label
+                                                                FontFamily="SarabunReg"
+                                                                FontSize="15"
+                                                                HorizontalOptions="EndAndExpand"
+                                                                Text="฿"
+                                                                TextColor="Black" />
+                                                            <!--  จำนวน  -->
+                                                            <Label
+                                                                FontFamily="SarabunReg"
+                                                                FontSize="15"
+                                                                HorizontalOptions="EndAndExpand"
+                                                                Text="{Binding Total}"
+                                                                TextColor="Black" />
+                                                        </StackLayout>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </BindableLayout.ItemTemplate>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <BoxView BackgroundColor="#F7F7F7" HeightRequest="2" />
+
+                                    <StackLayout Margin="20,0" Orientation="Horizontal">
+                                        <Label
+                                            FontFamily="SarabunReg"
+                                            FontSize="15"
+                                            HorizontalOptions="StartAndExpand"
+                                            Text="รวม"
+                                            TextColor="Black" />
+                                        <Label
+                                            FontFamily="SarabunReg"
+                                            FontSize="15"
+                                            Text="฿"
+                                            TextColor="Black" />
+
+                                        <!--  รวม  -->
+                                        <Label
+                                            FontFamily="SarabunReg"
+                                            FontSize="15"
+                                            Text="{Binding Price}"
+                                            TextColor="Black" />
+                                    </StackLayout>
+
+                                    <BoxView BackgroundColor="#F7F7F7" HeightRequest="2" />
+
+                                    <Button
+                                        Margin="5,0,5,5"
+                                        Padding="10,0"
+                                        BackgroundColor="{Binding BgBtn}"
+                                        Clicked="GoToPay"
+                                        CommandParameter="{Binding Id}"
+                                        CornerRadius="10"
+                                        HeightRequest="30"
+                                        HorizontalOptions="EndAndExpand"
+                                        IsEnabled="{Binding EnableBtn}"
+                                        Text="{Binding TextBtn}"
+                                        TextColor="White"
+                                        VerticalOptions="StartAndExpand" />
+                                </StackLayout>
+                            </Frame>
+
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

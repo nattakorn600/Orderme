@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.SettingGPSPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Grid HeightRequest="300">
+
+                    <Image
+                        x:Name="cir1"
+                        HorizontalOptions="CenterAndExpand"
+                        Opacity="0"
+                        Source="Circle.png"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="100" />
+                    <Image
+                        x:Name="cir2"
+                        HorizontalOptions="CenterAndExpand"
+                        Opacity="0"
+                        Source="Circle.png"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="250" />
+                    <Image
+                        x:Name="cir3"
+                        HorizontalOptions="CenterAndExpand"
+                        Opacity="0"
+                        Source="Circle.png"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="350" />
+                    <Image
+                        x:Name="pin"
+                        Margin="0,0,0,80"
+                        HorizontalOptions="CenterAndExpand"
+                        Opacity="0.9"
+                        Source="pin.png"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="60" />
+                </Grid>
+                <Label
+                    Margin="40,0,40,40"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="คุณต้องอนุญาติให้ระบบเข้าถึงตำแหน่งของคุณเพื่อใช้งาน oderme กรุณาลองใหม่อีกครั้ง แล้วเลือกตกลง"
+                    VerticalTextAlignment="Center" />
+                <Button
+                    BackgroundColor="#ff7a00"
+                    Clicked="OpenLocation"
+                    CornerRadius="25"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="ลองอีกครั้ง"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="150" />
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

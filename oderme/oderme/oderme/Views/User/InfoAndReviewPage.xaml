@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.User.InfoAndReviewPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#EFEFEF"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="40,40,30,20,40,45,auto" VerticalOptions="Start">
+            <Image
+                Grid.RowSpan="6"
+                Aspect="AspectFill"
+                BackgroundColor="#FF7A21" />
+
+            <BoxView
+                Grid.Row="5"
+                BackgroundColor="#EFEFEF"
+                CornerRadius="50,50,0,0"
+                HeightRequest="40"
+                VerticalOptions="EndAndExpand" />
+            <StackLayout
+                Grid.Row="1"
+                Margin="10,0"
+                Orientation="Horizontal">
+
+                <!--  Back Button  -->
+                <Frame
+                    Margin="0,0,5,0"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    HasShadow="False"
+                    HeightRequest="40"
+                    HorizontalOptions="Start"
+                    VerticalOptions="StartAndExpand">
+                    <ImageButton
+                        Padding="10"
+                        BackgroundColor="White"
+                        Clicked="BackButton"
+                        HorizontalOptions="End"
+                        Source="backbutton.png" />
+                </Frame>
+
+                <Label
+                    FontFamily="Sarabun"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"
+                    Text="ร้านอาหาร 1"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+            </StackLayout>
+
+            <!--  Menu  -->
+            <StackLayout
+                Grid.Row="4"
+                Margin="40,0"
+                Padding="0"
+                VerticalOptions="End">
+                <StackLayout
+                    Margin="3"
+                    HorizontalOptions="Start"
+                    Orientation="Horizontal"
+                    VerticalOptions="Fill">
+
+                    <!--  Review  -->
+                    <Frame
+                        Padding="10,5"
+                        BackgroundColor="White"
+                        CornerRadius="20"
+                        HasShadow="False">
+                        <StackLayout Orientation="Horizontal">
+                            <Image
+                                Margin="5,0"
+                                HeightRequest="15"
+                                Source="stars.png" />
+
+                            <Label
+                                FontFamily="Sarabun"
+                                FontSize="15"
+                                Text="รีวิว"
+                                TextColor="#FF7A21" />
+                        </StackLayout>
+
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+            <!--  ReviewPage  -->
+            <StackLayout
+                x:Name="ReviewPage"
+                Grid.Row="5"
+                Grid.RowSpan="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <CollectionView x:Name="Reviews" Margin="0,30,0,0">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Frame
+                                    Margin="20,10,20,0"
+                                    BackgroundColor="White"
+                                    CornerRadius="20"
+                                    HasShadow="False"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="StartAndExpand">
+                                    <StackLayout Orientation="Horizontal" Spacing="30">
+                                        <Image
+                                            HeightRequest="60"
+                                            HorizontalOptions="Start"
+                                            Source="userfake.png"
+                                            VerticalOptions="CenterAndExpand" />
+                                        <StackLayout>
+                                            <Label
+                                                FontFamily="Sarabun"
+                                                FontSize="18"
+                                                Text="{Binding Comment}"
+                                                TextColor="Black"
+                                                VerticalOptions="StartAndExpand" />
+                                            <StackLayout
+                                                HorizontalOptions="Start"
+                                                Orientation="Horizontal"
+                                                Spacing="3">
+                                                <Image
+                                                    HeightRequest="15"
+                                                    Source="{Binding Star1}"
+                                                    WidthRequest="15" />
+                                                <Image
+                                                    HeightRequest="15"
+                                                    Source="{Binding Star2}"
+                                                    WidthRequest="15" />
+                                                <Image
+                                                    HeightRequest="15"
+                                                    Source="{Binding Star3}"
+                                                    WidthRequest="15" />
+                                                <Image
+                                                    HeightRequest="15"
+                                                    Source="{Binding Star4}"
+                                                    WidthRequest="15" />
+                                                <Image
+                                                    HeightRequest="15"
+                                                    Source="{Binding Star5}"
+                                                    WidthRequest="15" />
+                                                <Label
+                                                    FontFamily="Sarabun"
+                                                    FontSize="15"
+                                                    Text="{Binding Point}"
+                                                    TextColor="#C4C4C4" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

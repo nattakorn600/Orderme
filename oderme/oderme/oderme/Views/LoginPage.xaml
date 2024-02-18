@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="oderme.Views.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source="bglog.png" />
+            <Grid RowDefinitions="0.8*,1.1*,3*">
+                <Image
+                    Grid.Row="1"
+                    Source="logoOderme.png" />
+                <StackLayout Grid.Row="2" Orientation="Vertical">
+                    <Label
+                        FontSize="30"
+                        HorizontalTextAlignment="Center"
+                        Text="SIGN IN" FontAttributes="Bold"
+                        TextColor="White" />
+                    <BoxView
+                        Margin="40,10,40,0"
+                        BackgroundColor="White"
+                        HeightRequest="3" />
+                    <Button
+                        Margin="30,40,30,0"
+                        Padding="10"
+                        BackgroundColor="#003485"
+                        Command="{Binding OnLoginFacebook}"
+                        CornerRadius="10"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HeightRequest="60"
+                        ImageSource="logofacebook.png"
+                        Text="SIGN IN WITH FACEBOOK"
+                        TextColor="White" />
+                    <Button
+                        Margin="30,40,30,0"
+                        Padding="10"
+                        BackgroundColor="#C91D00"
+                        Command="{Binding OnLoginGoogle}"
+                        CornerRadius="10"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HeightRequest="60"
+                        ImageSource="logogoogle.png"
+                        Text="SIGN IN WITH GOOGLE"
+                        TextColor="White" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
